@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://305discount.com/sitemap.xml

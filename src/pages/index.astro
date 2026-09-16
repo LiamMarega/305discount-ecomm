@@ -1,46 +1,146 @@
 ---
+const siteUrl = 'https://305discount.com';
+const title = '305 Discount | Furniture, Appliances & Mattresses in Miami';
+const description =
+  '305 Discount is launching a Miami wholesale catalog for furniture, appliances, mattresses, and verified liquidation inventory. Coming soon.';
+const socialImage = `${siteUrl}/og-image.png`;
+
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Organization',
+      '@id': `${siteUrl}/#organization`,
+      name: '305 Discount',
+      url: siteUrl,
+      logo: {
+        '@type': 'ImageObject',
+        url: `${siteUrl}/brand-logo.webp`,
+        width: 1000,
+        height: 351,
+      },
+      image: {
+        '@type': 'ImageObject',
+        url: socialImage,
+        width: 1200,
+        height: 630,
+      },
+      telephone: '+1-954-254-0056',
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: 'Miami',
+        addressRegion: 'FL',
+        addressCountry: 'US',
+      },
+    },
+    {
+      '@type': 'WebSite',
+      '@id': `${siteUrl}/#website`,
+      url: `${siteUrl}/`,
+      name: '305 Discount',
+      publisher: {
+        '@id': `${siteUrl}/#organization`,
+      },
+      inLanguage: 'en-US',
+    },
+    {
+      '@type': 'WebPage',
+      '@id': `${siteUrl}/#webpage`,
+      url: `${siteUrl}/`,
+      name: title,
+      description,
+      isPartOf: {
+        '@id': `${siteUrl}/#website`,
+      },
+      about: {
+        '@id': `${siteUrl}/#organization`,
+      },
+      primaryImageOfPage: {
+        '@type': 'ImageObject',
+        url: socialImage,
+        width: 1200,
+        height: 630,
+      },
+      inLanguage: 'en-US',
+    },
+  ],
+};
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en-US">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="generator" content={Astro.generator} />
+
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta
+      name="robots"
+      content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+    />
+    <link rel="canonical" href={`${siteUrl}/`} />
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+
+    <meta name="application-name" content="305 Discount" />
+    <meta name="apple-mobile-web-app-title" content="305 Discount" />
+    <meta name="theme-color" content="#ffffff" />
     <meta name="color-scheme" content="light" />
-    <title>305discount.com — Coming Soon</title>
-    <meta name="description" content="305discount.com is coming soon." />
+
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <link
+      rel="preload"
+      href="/brand-logo.webp"
+      as="image"
+      type="image/webp"
+      fetchpriority="high"
+    />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="305 Discount" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:url" content={`${siteUrl}/`} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={socialImage} />
+    <meta property="og:image:secure_url" content={socialImage} />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="305 Discount — Furniture, Appliances & Mattresses — Coming Soon"
+    />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={socialImage} />
+    <meta
+      name="twitter:image:alt"
+      content="305 Discount — Furniture, Appliances & Mattresses — Coming Soon"
+    />
+
+    <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
   </head>
   <body>
     <main class="main-container">
       <header class="brand-section">
         <div class="logo-frame">
-          <svg class="brand-logo" viewBox="0 0 720 253" role="img" aria-label="305 Discount">
-            <defs>
-              <linearGradient id="logo-orange" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0" stop-color="#ffbd18" />
-                <stop offset="1" stop-color="#ff4d00" />
-              </linearGradient>
-              <linearGradient id="logo-blue" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0" stop-color="#169fff" />
-                <stop offset="1" stop-color="#00307a" />
-              </linearGradient>
-            </defs>
-            <g font-family="Arial Black, Impact, sans-serif" text-anchor="middle" font-style="italic">
-              <text x="360" y="91" font-size="112" font-weight="900" fill="#011c50" stroke="#011c50" stroke-width="18" paint-order="stroke">305</text>
-              <text x="360" y="91" font-size="112" font-weight="900" fill="url(#logo-orange)" stroke="#f8f8f8" stroke-width="7" paint-order="stroke">305</text>
-              <text x="360" y="166" font-size="79" font-weight="900" letter-spacing="-4" fill="#ff6812" stroke="#ff6812" stroke-width="15" paint-order="stroke">DISCOUNT</text>
-              <text x="360" y="166" font-size="79" font-weight="900" letter-spacing="-4" fill="url(#logo-blue)" stroke="#f8f8f8" stroke-width="7" paint-order="stroke">DISCOUNT</text>
-            </g>
-            <path d="M22 173h676l-12 40H34z" fill="#011c50" stroke="#ff6812" stroke-width="5" />
-            <g fill="#fff" font-family="Arial Black, Impact, sans-serif" font-size="24" font-weight="900" text-anchor="middle">
-              <text x="135" y="202">FURNITURE</text>
-              <text x="355" y="202">APPLIANCES</text>
-              <text x="585" y="202">MATTRESS</text>
-            </g>
-            <path d="M20 235h125M575 235h125" stroke="#ff6812" stroke-width="10" />
-            <text x="360" y="250" fill="#011c50" font-family="Arial Black, Impact, sans-serif" font-size="50" font-weight="900" text-anchor="middle">954-254-0056</text>
-          </svg>
+          <img
+            src="/brand-logo.webp"
+            alt="305 Discount — Furniture, Appliances & Mattresses — 954-254-0056"
+            class="brand-logo"
+            width="1000"
+            height="351"
+            loading="eager"
+            decoding="async"
+            fetchpriority="high"
+          />
         </div>
 
         <div class="tagline-badge">
@@ -49,15 +149,18 @@
         </div>
       </header>
 
-      <section class="content-section">
-        <h1 class="headline">Coming Soon</h1>
+      <section class="content-section" aria-labelledby="coming-soon-title">
+        <h1 class="headline" id="coming-soon-title">Coming Soon</h1>
         <p class="description">
           We're launching our direct liquidation catalog with verified Miami inventory.
+          Furniture, appliances and mattresses — coming soon.
         </p>
       </section>
 
       <footer class="footer-meta">
-        &copy; 305discount.com &bull; Miami, FL
+        <span>&copy; 305discount.com</span>
+        <span aria-hidden="true">&bull;</span>
+        <span>Miami, FL</span>
       </footer>
     </main>
   </body>
@@ -84,12 +187,8 @@
     padding: 0;
   }
 
-  html, body {
-    height: 100%;
-    background-color: var(--bg);
-    color: var(--fg);
-    font-family: var(--font-body);
-    -webkit-font-smoothing: antialiased;
+  html {
+    background: var(--bg);
   }
 
   body {
@@ -99,7 +198,16 @@
     justify-content: center;
     min-height: 100dvh;
     padding: 1.5rem;
-    background-image: radial-gradient(ellipse at 50% 30%, oklch(96% 0.01 250 / 0.75), transparent 70%);
+    background-color: var(--bg);
+    background-image: radial-gradient(
+      ellipse at 50% 30%,
+      oklch(96% 0.01 250 / 0.75),
+      transparent 70%
+    );
+    color: var(--fg);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
     overflow-x: hidden;
   }
 
@@ -123,8 +231,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 2rem;
     width: 100%;
+    margin-bottom: 2rem;
   }
 
   .logo-frame {
@@ -132,15 +240,16 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    max-width: 280px;
-    min-height: 90px;
+    max-width: 300px;
+    min-height: 100px;
     margin-bottom: 1.25rem;
   }
 
   .brand-logo {
-    width: 100%;
-    max-height: 110px;
     display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
   }
 
   .tagline-badge {
@@ -148,13 +257,13 @@
     align-items: center;
     gap: 0.45rem;
     padding: 0.35rem 0.85rem;
+    border: 1px solid var(--border);
     border-radius: 9999px;
     background: var(--bg);
-    border: 1px solid var(--border);
+    color: var(--muted);
     font-family: var(--font-mono);
     font-size: 0.75rem;
     font-weight: 500;
-    color: var(--muted);
     letter-spacing: 0.04em;
     text-transform: uppercase;
   }
@@ -169,8 +278,15 @@
   }
 
   @keyframes pulse {
-    0%, 100% { opacity: 1; transform: scale(1); }
-    50% { opacity: 0.45; transform: scale(0.9); }
+    0%, 100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    50% {
+      opacity: 0.45;
+      transform: scale(0.9);
+    }
   }
 
   .content-section {
@@ -178,28 +294,39 @@
   }
 
   .headline {
+    margin-bottom: 0.75rem;
+    color: var(--fg);
     font-family: var(--font-display);
     font-size: 2.35rem;
     font-weight: 800;
     letter-spacing: -0.035em;
     line-height: 1.15;
-    margin-bottom: 0.75rem;
-    color: var(--fg);
   }
 
   .description {
-    font-size: 0.95rem;
-    line-height: 1.5;
-    color: var(--muted);
     max-width: 360px;
     margin: 0 auto;
+    color: var(--muted);
+    font-size: 0.95rem;
+    line-height: 1.55;
   }
 
   .footer-meta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.35rem;
     margin-top: 2rem;
-    font-size: 0.78rem;
     color: var(--muted);
+    font-size: 0.78rem;
     letter-spacing: 0.01em;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .status-dot {
+      animation: none;
+    }
   }
 
   @media (max-width: 480px) {
@@ -210,6 +337,10 @@
     .main-container {
       padding: 2.25rem 1.25rem;
       border-radius: 20px;
+    }
+
+    .logo-frame {
+      max-width: 280px;
     }
 
     .headline {
