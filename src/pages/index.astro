@@ -1,17 +1,342 @@
 ---
-
 ---
 
+<!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+    <title>305discount.com — Coming Soon</title>
+    <meta name="description" content="305discount.com is coming soon." />
+  </head>
+  <body>
+    <main class="main-container">
+      <header class="brand-section">
+        <div class="logo-frame">
+          <svg class="brand-logo" viewBox="0 0 720 253" role="img" aria-label="305 Discount">
+            <defs>
+              <linearGradient id="logo-orange" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#ffbd18" />
+                <stop offset="1" stop-color="#ff4d00" />
+              </linearGradient>
+              <linearGradient id="logo-blue" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#169fff" />
+                <stop offset="1" stop-color="#00307a" />
+              </linearGradient>
+            </defs>
+            <g font-family="Arial Black, Impact, sans-serif" text-anchor="middle" font-style="italic">
+              <text x="360" y="91" font-size="112" font-weight="900" fill="#011c50" stroke="#011c50" stroke-width="18" paint-order="stroke">305</text>
+              <text x="360" y="91" font-size="112" font-weight="900" fill="url(#logo-orange)" stroke="#f8f8f8" stroke-width="7" paint-order="stroke">305</text>
+              <text x="360" y="166" font-size="79" font-weight="900" letter-spacing="-4" fill="#ff6812" stroke="#ff6812" stroke-width="15" paint-order="stroke">DISCOUNT</text>
+              <text x="360" y="166" font-size="79" font-weight="900" letter-spacing="-4" fill="url(#logo-blue)" stroke="#f8f8f8" stroke-width="7" paint-order="stroke">DISCOUNT</text>
+            </g>
+            <path d="M22 173h676l-12 40H34z" fill="#011c50" stroke="#ff6812" stroke-width="5" />
+            <g fill="#fff" font-family="Arial Black, Impact, sans-serif" font-size="24" font-weight="900" text-anchor="middle">
+              <text x="135" y="202">FURNITURE</text>
+              <text x="355" y="202">APPLIANCES</text>
+              <text x="585" y="202">MATTRESS</text>
+            </g>
+            <path d="M20 235h125M575 235h125" stroke="#ff6812" stroke-width="10" />
+            <text x="360" y="250" fill="#011c50" font-family="Arial Black, Impact, sans-serif" font-size="50" font-weight="900" text-anchor="middle">954-254-0056</text>
+          </svg>
+        </div>
+
+        <div class="tagline-badge">
+          <span class="status-dot" aria-hidden="true"></span>
+          <span>Online Wholesale Catalog</span>
+        </div>
+      </header>
+
+      <section class="content-section">
+        <h1 class="headline">Coming Soon</h1>
+        <p class="description">
+          We're launching our direct liquidation catalog with verified Miami inventory. Enter your email for early VIP access.
+        </p>
+      </section>
+
+      <section class="form-section" aria-label="Early access preview">
+        <div class="waitlist-form">
+          <div class="input-row">
+            <input
+              type="email"
+              class="email-input"
+              placeholder="Enter your email"
+              autocomplete="email"
+              aria-label="Email address"
+            />
+            <button type="button" class="submit-btn">Notify Me</button>
+          </div>
+          <p class="form-message" aria-hidden="true"></p>
+        </div>
+      </section>
+
+      <footer class="footer-meta">
+        &copy; 305discount.com &bull; Miami, FL
+      </footer>
+    </main>
+  </body>
 </html>
+
+<style is:global>
+  :root {
+    --bg: oklch(98.8% 0.002 240);
+    --surface: oklch(100% 0 0);
+    --fg: oklch(18% 0.015 250);
+    --muted: oklch(48% 0.015 250);
+    --border: oklch(91% 0.005 250);
+    --border-focus: oklch(54% 0.22 255);
+    --accent: oklch(52% 0.22 255);
+    --accent-hover: oklch(46% 0.23 255);
+    --accent-fg: oklch(99% 0 0);
+
+    --font-display: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Inter', system-ui, sans-serif;
+    --font-body: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Inter', system-ui, sans-serif;
+    --font-mono: ui-monospace, 'JetBrains Mono', Menlo, monospace;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: oklch(14% 0.01 250);
+      --surface: oklch(18% 0.015 250);
+      --fg: oklch(96% 0.005 250);
+      --muted: oklch(65% 0.015 250);
+      --border: oklch(27% 0.01 250);
+      --border-focus: oklch(64% 0.22 255);
+      --accent: oklch(62% 0.22 255);
+      --accent-hover: oklch(68% 0.20 255);
+      --accent-fg: oklch(15% 0.02 250);
+    }
+  }
+
+  *, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html, body {
+    height: 100%;
+    background-color: var(--bg);
+    color: var(--fg);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100dvh;
+    padding: 1.5rem;
+    background-image: radial-gradient(ellipse at 50% 30%, oklch(96% 0.01 250 / 0.75), transparent 70%);
+    overflow-x: hidden;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    body {
+      background-image: radial-gradient(ellipse at 50% 30%, oklch(22% 0.02 250 / 0.5), transparent 70%);
+    }
+  }
+
+  .main-container {
+    width: 100%;
+    max-width: 460px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2.75rem 2rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    box-shadow:
+      0 1px 2px oklch(0% 0 0 / 0.03),
+      0 8px 24px -6px oklch(0% 0 0 / 0.04);
+  }
+
+  .brand-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+    width: 100%;
+  }
+
+  .logo-frame {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 280px;
+    min-height: 90px;
+    margin-bottom: 1.25rem;
+  }
+
+  .brand-logo {
+    width: 100%;
+    max-height: 110px;
+    display: block;
+  }
+
+  .tagline-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.35rem 0.85rem;
+    border-radius: 9999px;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--muted);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  .status-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: var(--accent);
+    box-shadow: 0 0 8px var(--accent);
+    animation: pulse 2s infinite ease-in-out;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.45; transform: scale(0.9); }
+  }
+
+  .content-section {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .headline {
+    font-family: var(--font-display);
+    font-size: 2.35rem;
+    font-weight: 800;
+    letter-spacing: -0.035em;
+    line-height: 1.15;
+    margin-bottom: 0.75rem;
+    color: var(--fg);
+  }
+
+  .description {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: var(--muted);
+    max-width: 360px;
+    margin: 0 auto;
+  }
+
+  .form-section {
+    width: 100%;
+  }
+
+  .waitlist-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+    width: 100%;
+  }
+
+  .input-row {
+    display: flex;
+    gap: 0.5rem;
+    width: 100%;
+  }
+
+  .email-input {
+    flex: 1;
+    height: 48px;
+    padding: 0 1rem;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    background: var(--bg);
+    color: var(--fg);
+    font-size: 0.95rem;
+    font-family: inherit;
+    outline: none;
+    transition: border-color 0.18s ease, box-shadow 0.18s ease;
+  }
+
+  .email-input::placeholder {
+    color: var(--muted);
+    opacity: 0.8;
+  }
+
+  .email-input:focus {
+    border-color: var(--border-focus);
+    box-shadow: 0 0 0 3px oklch(52% 0.22 255 / 0.15);
+    background: var(--surface);
+  }
+
+  .submit-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 48px;
+    padding: 0 1.35rem;
+    border-radius: 12px;
+    border: none;
+    background: var(--accent);
+    color: var(--accent-fg);
+    font-size: 0.92rem;
+    font-weight: 600;
+    font-family: inherit;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background-color 0.18s ease, transform 0.1s ease;
+  }
+
+  .submit-btn:hover {
+    background: var(--accent-hover);
+  }
+
+  .submit-btn:active {
+    transform: scale(0.98);
+  }
+
+  .submit-btn:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+
+  .form-message {
+    min-height: 1.2rem;
+  }
+
+  .footer-meta {
+    margin-top: 2rem;
+    font-size: 0.78rem;
+    color: var(--muted);
+    letter-spacing: 0.01em;
+  }
+
+  @media (max-width: 480px) {
+    body {
+      padding: 1rem;
+    }
+
+    .main-container {
+      padding: 2.25rem 1.25rem;
+      border-radius: 20px;
+    }
+
+    .input-row {
+      flex-direction: column;
+    }
+
+    .submit-btn {
+      width: 100%;
+    }
+
+    .headline {
+      font-size: 2rem;
+    }
+  }
+</style>
