@@ -7,6 +7,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content={Astro.generator} />
+    <meta name="color-scheme" content="light" />
     <title>305discount.com — Coming Soon</title>
     <meta name="description" content="305discount.com is coming soon." />
   </head>
@@ -80,6 +81,7 @@
 
 <style is:global>
   :root {
+    color-scheme: light;
     --bg: oklch(98.8% 0.002 240);
     --surface: oklch(100% 0 0);
     --fg: oklch(18% 0.015 250);
@@ -93,20 +95,6 @@
     --font-display: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Inter', system-ui, sans-serif;
     --font-body: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Inter', system-ui, sans-serif;
     --font-mono: ui-monospace, 'JetBrains Mono', Menlo, monospace;
-  }
-
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --bg: oklch(14% 0.01 250);
-      --surface: oklch(18% 0.015 250);
-      --fg: oklch(96% 0.005 250);
-      --muted: oklch(65% 0.015 250);
-      --border: oklch(27% 0.01 250);
-      --border-focus: oklch(64% 0.22 255);
-      --accent: oklch(62% 0.22 255);
-      --accent-hover: oklch(68% 0.20 255);
-      --accent-fg: oklch(15% 0.02 250);
-    }
   }
 
   *, *::before, *::after {
@@ -132,12 +120,6 @@
     padding: 1.5rem;
     background-image: radial-gradient(ellipse at 50% 30%, oklch(96% 0.01 250 / 0.75), transparent 70%);
     overflow-x: hidden;
-  }
-
-  @media (prefers-color-scheme: dark) {
-    body {
-      background-image: radial-gradient(ellipse at 50% 30%, oklch(22% 0.02 250 / 0.5), transparent 70%);
-    }
   }
 
   .main-container {
