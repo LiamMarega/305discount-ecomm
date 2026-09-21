@@ -1,0 +1,22 @@
+---
+import SitePageLayout from '../layouts/SitePageLayout.astro';
+import ContactForm from '../components/contact/ContactForm.astro';
+---
+
+<SitePageLayout
+  title="Contact"
+  description="Contact 305 Discount about current inventory, furniture, appliances, mattresses, liquidation products, pickup, or delivery."
+  eyebrow="305 Discount · Miami"
+>
+  <section class="legal-section" style="margin: 0; padding: 0; border: 0;">
+    <h2>Talk to our team</h2>
+    <p>
+      Send us your details and we'll open WhatsApp with your inquiry prepared. You can also call
+      <a href="tel:+19542540056">+1 (954) 254-0056</a>.
+    </p>
+  </section>
+
+  <div style="margin-top: 2rem;">
+    <ContactForm />
+  </div>
+</SitePageLayout>
