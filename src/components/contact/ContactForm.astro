@@ -1,0 +1,82 @@
+---
+import ContactConsent from './ContactConsent.astro';
+---
+
+<form id="contact-form">
+  <div class="field-grid">
+    <label class="field">
+      First name
+      <input name="firstName" autocomplete="given-name" />
+    </label>
+    <label class="field">
+      Last name
+      <input name="lastName" autocomplete="family-name" />
+    </label>
+  </div>
+
+  <div class="field-grid" style="margin-top: 1rem;">
+    <label class="field">
+      Phone *
+      <input name="phone" type="tel" autocomplete="tel" required />
+    </label>
+    <label class="field">
+      Email *
+      <input name="email" type="email" autocomplete="email" required />
+    </label>
+  </div>
+
+  <label class="field" style="margin-top: 1rem;">
+    How can we help?
+    <textarea name="message"></textarea>
+  </label>
+
+  <ContactConsent />
+
+  <p style="margin: .85rem 0 0; color: var(--muted); font-size: .75rem; line-height: 1.55;">
+    Entering a phone number alone does not grant permission to send SMS messages. SMS consent is collected separately above.
+  </p>
+
+  <div class="form-actions">
+    <small>
+      <a href="/privacy">Privacy Policy</a>
+      &nbsp;·&nbsp;
+      <a href="/terms">Terms &amp; Conditions</a>
+    </small>
+    <button class="primary-button" type="submit">Send via WhatsApp</button>
+  </div>
+</form>
+
+<script>
+  const form = document.querySelector<HTMLFormElement>('#contact-form');
+
+  form?.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    const data = new FormData(form);
+    const firstName = String(data.get('firstName') || '').trim();
+    const lastName = String(data.get('lastName') || '').trim();
+    const phone = String(data.get('phone') || '').trim();
+    const email = String(data.get('email') || '').trim();
+    const message = String(data.get('message') || '').trim();
+    const transactional = data.get('transactionalConsent') === 'on';
+    const marketing = data.get('marketingConsent') === 'on';
+
+    const lines = [
+      "Hi! I'd like to contact 305 Discount.",
+      '',
+      'Name: ' + [firstName, lastName].filter(Boolean).join(' '),
+      'Phone: ' + phone,
+      'Email: ' + email,
+      message ? 'Message: ' + message : '',
+      '',
+      'Transactional consent: ' + (transactional ? 'Yes' : 'No'),
+      'Marketing consent: ' + (marketing ? 'Yes' : 'No'),
+    ].filter(Boolean);
+
+    window.open(
+      'https://wa.me/19542540056?text=' + encodeURIComponent(lines.join('\n')),
+      '_blank',
+      'noopener,noreferrer'
+    );
+  });
+</script>
