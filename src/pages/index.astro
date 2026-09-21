@@ -161,6 +161,10 @@ const structuredData = {
         <span>&copy; 305discount.com</span>
         <span aria-hidden="true">&bull;</span>
         <span>Miami, FL</span>
+        <span aria-hidden="true">&bull;</span>
+        <a href="/contact">Contact</a>
+        <a href="/terms">Terms</a>
+        <a href="/privacy">Privacy</a>
       </footer>
     </main>
   </body>
@@ -316,11 +320,22 @@ const structuredData = {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 0.35rem;
+    gap: 0.35rem 0.55rem;
     margin-top: 2rem;
     color: var(--muted);
     font-size: 0.78rem;
     letter-spacing: 0.01em;
+  }
+
+  .footer-meta a {
+    color: var(--muted);
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .footer-meta a:hover {
+    color: var(--accent);
   }
 
   @media (prefers-reduced-motion: reduce) {

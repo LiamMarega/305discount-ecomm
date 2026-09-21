@@ -10,4 +10,13 @@
       <image:title>305 Discount</image:title>
     </image:image>
   </url>
+  <url>
+    <loc>https://305discount.com/contact</loc>
+  </url>
+  <url>
+    <loc>https://305discount.com/terms</loc>
+  </url>
+  <url>
+    <loc>https://305discount.com/privacy</loc>
+  </url>
 </urlset>
